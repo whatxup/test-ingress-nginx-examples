@@ -2,12 +2,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: apps-ingress-1
+  name: apps-ingress-nginx-secondary
   namespace: test-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-secondary
   rules:
   - http:
       paths:
